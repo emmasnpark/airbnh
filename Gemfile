@@ -34,6 +34,9 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'devise', '~> 4.2'
 gem 'stripe'
+gem 'toastr-rails', '~> 1.0'
+gem 'paperclip', '~> 5.1.0'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
