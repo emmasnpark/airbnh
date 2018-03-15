@@ -1,5 +1,54 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% if current_user %>
-<%= link_to "Register your house", new_room_path %>
-<% end %>
+<div class="main_photos">
+  <div class="row greeting">
+    <h1>Where are you leaving for?</h1>
+  </div>
+  <div class="row greeting">
+    <h3>Enjoy your travel with Airbnh</h3>
+  </div>
+</div>
+
+<h1 class="homes">Homes</h1>
+<div class="row">
+  <% @rooms.each do |room| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel panel-heading preview">
+          <%= image_tag room.cover_photo(:medium)%>
+        </div>
+        <div class="panel panel-body">
+          <p style="font-size:17px"><%= link_to room.listing_name, room %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<hr>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>About Us</h4>
+        <p>Careers</p>
+        <p>Press</p>
+        <p>Policies</p>
+        <p>Help</p>
+        <p>Diversity</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Hosting</h4>
+        <p>Why Host</p>
+        <p>Hospitality</p>
+        <p>Responsible Hosting</p>
+        <p>Community Center</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Terms</h4>
+        <h4>Privacy</h4>
+        <h4>Site Map</h4>
+      </div>
+    </div>
+<hr>
+  <p>&copy; 2018 Airbnh<p>
+  </div>
+</footer>

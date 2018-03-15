@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+@import "jquery-ui";
+
+//Logo
+.logo {
+  margin-top: 7px;
+}
 
 //AVATAR
 .avatar-small {
@@ -34,7 +40,7 @@
   min-height: 100%;
   font-size: 100px;
   text-align: right;
-  filter: alpha(opacity=0);
+  filter: alpha(opacity=0);.
   opacity: 0;
   outline: none;
   background: white;
@@ -48,4 +54,68 @@
 
 .panel-heading.preview img {
   width: 100%;
+}
+
+// RESERVATIONS
+.reservation_table td{
+  width: 100%;
+  border-bottom: 1px solid #dce0e0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-control .datepicker {
+  color: #00A699;
+}
+
+.message-alert {
+  color: #d43242;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+//Home Page
+.homes {
+  color:#777;
+}
+
+.main_photos {
+  height: 500px;
+  width: 100%;
+  /* border: 1px solid black; */
+  background-image: url("https://cdn.vox-cdn.com/thumbor/bujaWc4L6HOAgim2bCaElSpelng=/0x0:940x627/1200x800/filters:focal(395x239:545x389)/cdn.vox-cdn.com/uploads/chorus_image/image/52264099/large.0.jpeg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.panel {
+  border:0;
+}
+
+.become-a-host {
+  margin-top: 10px;
+}
+
+.greeting {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.greeting h1 {
+  margin-top: 40px;
+  text-shadow: 0px 5px 9px black;
+  font-size: 5rem;
+}
+
+.greeting h3 {
+  text-shadow: 0px 5px 9px black;
+  font-size: 4rem;
+}
+
+.title {
+  font-weight: 3px;
+  color: red;
 }
