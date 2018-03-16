@@ -1,24 +1,15 @@
-# README
+## Technologies
+> HTML
+> CSS
+> Bootstrap
+> Ruby on Rails
+> SQLite
+> JQuery
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About This App
 
-Things you may want to cover:
+I tried to clone some features of Airbnb website.
+As a host, you can register your house and check all of your houses on your profile page and edit them.
+The guests can check available dates using a calendar.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Alt text](/app/assets/images/Screen Shot.jpg)
