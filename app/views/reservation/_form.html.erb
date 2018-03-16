@@ -46,7 +46,7 @@
   function checkDate(date) {
     dmy = date.getDate() + "-" + (date.getMonth() +1) + "-" + date.getFullYear();
     console.log("~~~~~~~~~~~~~~~~~~~~~~~")
-    console.log(dmy)
+    console.log('dmy '+dmy)
     console.log("return"+$.inArray(dmy, unavailableDates))
     return [$.inArray(dmy, unavailableDates) == -1]
   }
