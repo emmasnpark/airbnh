@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20180305122130) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "photos", force: :cascade do |t|
-    t.integer "room_id"
+    t.bigint "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
@@ -24,8 +27,8 @@ ActiveRecord::Schema.define(version: 20180305122130) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "room_id"
+    t.bigint "user_id"
+    t.bigint "room_id"
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer "price"
@@ -52,7 +55,7 @@ ActiveRecord::Schema.define(version: 20180305122130) do
     t.boolean "is_internet"
     t.integer "price"
     t.boolean "active"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_rooms_on_user_id"
@@ -78,4 +81,8 @@ ActiveRecord::Schema.define(version: 20180305122130) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "photos", "rooms"
+  add_foreign_key "reservations", "rooms"
+  add_foreign_key "reservations", "users"
+  add_foreign_key "rooms", "users"
 end
