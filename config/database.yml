@@ -22,6 +22,6 @@ test:
 
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: airbnh_production
+  username: airbnh
+  password: <%= ENV['AIRBNH_DATABASE_PASSWORD'] %>
