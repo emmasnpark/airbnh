@@ -124,3 +124,26 @@
   margin-top: 0;
   margin-bottom: 30px;
 }
+
+//Side-bar
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #565A5C;
+  text-decoration: none;
+}
