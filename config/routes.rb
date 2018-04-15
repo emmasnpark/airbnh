@@ -7,6 +7,7 @@ Rails.application.routes.draw do
               path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registraion'}
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   resources :users, only: [:show]
   resources :rooms, except: [:edit] do
     member do
@@ -22,5 +23,5 @@ Rails.application.routes.draw do
     resources :photos, only: [:create, :destroy]
     resources :reservations, only: [:create]
   end
-  get '/your_trips', to: 'reservations#your_trips'
+  get '/your_trips' => 'reservations#your_trips'
 end

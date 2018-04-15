@@ -1,3 +1,4 @@
+require 'pry'
 class ReservationsController < ApplicationController
   before_action :authenticate_user!
 
@@ -31,3 +32,5 @@ class ReservationsController < ApplicationController
   end
 
 end
+# binding.pry
+# puts "paused"

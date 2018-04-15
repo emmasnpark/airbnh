@@ -1,9 +1,9 @@
 <div class="panel panel-primary">
-  <div class="panel panel-heading">
+  <div class="panel-heading">
     <span>$<%= @room.price%></span>
     <span class="pull-right">Per Night</span>
   </div>
-  <div class="panel panel-body">
+  <div class="panel-body">
     <%= form_for([@room, @room.reservations.new]) do |f| %>
     <div class="row">
       <div class="col-md-6">
@@ -44,10 +44,8 @@
 <script>
 
   function checkDate(date) {
+    console.log(date)
     dmy = date.getDate() + "-" + (date.getMonth() +1) + "-" + date.getFullYear();
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~")
-    console.log('dmy '+dmy)
-    console.log("return"+$.inArray(dmy, unavailableDates))
     return [$.inArray(dmy, unavailableDates) == -1]
   }
 
@@ -61,17 +59,10 @@
       dateTyp: 'json',
       success: function(data) {
         $.each(data, function(arrID, arrValue) {
-            console.log("data " + data)
-          console.log(arrValue)
-            for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate())) {
+            for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() +1)) {
               unavailableDates.push($.datepicker.formatDate('d-m-yy', d));
-              console.log('-------------')
-              console.log(new Date(arrValue.start_date));
-              console.log(arrValue)
-              console.log("d.getDate = "+d.getDate())
-              console.log("d.getDate + 1 = "+(d.getDate()+1))
-              console.log(d.setDate(d.getDate() + 1))
-              console.log("d = "+d)
+
+              console.log(d)
             }
             console.log("unavailableDates "+ unavailableDates)
         });
