@@ -22,7 +22,7 @@
 }
 
 .avatar-full {
-  width: 80%;
+  width: 100%;
 }
 
 
@@ -146,4 +146,13 @@
 .active.sidebar-link {
   color: #565A5C;
   text-decoration: none;
+}
+
+//Profile
+.profile-image {
+ margin-top: 7px;
+}
+
+.profile-user-name {
+  margin-top: 0
 }
